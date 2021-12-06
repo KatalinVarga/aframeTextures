@@ -6,16 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <title>aFrame Starter Template - DAT515</title>
 </head>
 
 <body>
+    <a-assets>
+        <img id="floor" src="assets/textures/floorTexture/floorTexture.jpg"/>
+        <img id="floorNRM" src="assets/textures/floorTexture/floorTexture_NRM_Normal.jpg"/>
+        <img id="fishSkin" src="assets/textures/floorTexture/fish.jpg"/>
+        <img id="floorGreen" src="assets/textures/floorTexture/floorTextureGreen.jpg"/>
+    </a-assets>
     <a-scene>
-        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+       <!-- <a-box position="0 1.5 -3" rotation="0 0 0" scale="2 2 2" repeat="2 2" normal-texture-repeat="2 2" color="#fff" normal-map="#floorNRM" shader: flat; src="#floor"></a-box> -->
+        <a-plane color="#fff" shader: flat; src="#floor" scale="100 100 1" normal-map="#floorNRM" rotation="-90 0 0" repeat="50 50" normal-texture-repeat="50 50"></a-plane>
+        <a-sphere position="-1.5 3 -3" color="#fff" shader: flat; src="#floorGreen" scale="0.5 0.5 0.5" repeat="2 2" rotation="0 0 0" ></a-sphere>
+        <a-sphere position="1.5 3 -3" color="#fff" shader: flat; src="#fishSkin" scale="0.5 0.5 0.5" repeat="5 5" rotation="0 0 0" ></a-sphere>
         <a-sky color="#ECECEC"></a-sky>
       </a-scene>
     
